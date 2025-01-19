@@ -1,25 +1,15 @@
 <script setup lang="ts">
-import {useResumeStore} from "@/stores/resume.ts";
-import CVForm from "@/views/CVForm.vue";
-import CVPreview from "@/views/CVPreview.vue";
-
-const resume = useResumeStore();
+import { RouterView } from 'vue-router'
 </script>
 
-<template class="container">
-    <div class="flex gap-4 h-screen column-2">
-      <!-- Left side: Form and JSON preview -->
-      <div class="w-1/2 p-4 bg-gray-100 overflow-auto">
-        <h2 class="text-xl font-bold mb-4">Resume Form</h2>
-        <CVForm/>
-        <h2 class="text-xl font-bold mt-8">JSON Preview</h2>
-        <pre class="bg-white p-4 border rounded mt-4 text-sm overflow-auto">{{ resume }}</pre>
-      </div>
+<template>
 
-      <!-- Right side: Resume Preview -->
-      <div class="w-1/2 p-4 bg-white border-l overflow-auto">
-        <h2 class="text-xl font-bold mb-4">Resume Preview</h2>
-        <CVPreview/>
-      </div>
-    </div>
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 text-center text-xl mt-4">
+    <header class="capitalize mb-4">
+      Resume Forge
+    </header>
+    <hr/>
+  </div>
+  <RouterView />
 </template>
+

@@ -1,6 +1,6 @@
 <template>
   <FormSection>
-    <h2 class="text-lg font-semibold">Work Experience</h2>
+    <h2 class="text-lg font-semibold">Experience</h2>
     <div v-for="(job, index) in resume.work" :key="index" class="space-y-2">
       <input class="input" v-model="job.company" placeholder="Company" />
       <input class="input" v-model="job.position" placeholder="Position" />

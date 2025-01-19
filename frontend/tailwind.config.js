@@ -2,10 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{vue,js,ts,jsx,tsx,css}",
   ],
   theme: {
-
     screens: {
       sm: '480px',
       md: '768px',
@@ -38,8 +37,6 @@ export default {
     }
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
   ],
 }
 
