@@ -1,0 +1,27 @@
+#version: "3.4"
+#services:
+#  my_frontend:
+#    container_name: my_frontend
+#    image: node:lts
+#    working_dir: /var/www/html/app/
+#    entrypoint: /bin/bash
+#    expose:
+#      - 8090
+#      - 5173
+#      - 4173
+#    volumes:
+#      - ./frontend/:/var/www/html/app
+#    tty: true
+version: "3.9"
+services:
+  my_frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5174:5174'
+    volumes:
+      - ./frontend:/var/www/html/app # Syncs the local app directory with the container
+      - /var/www/html/app/node_modules
+    stdin_open: true
+    tty: true
