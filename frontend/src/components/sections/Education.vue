@@ -14,7 +14,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import { useResumeStore } from '@/stores/resume';
 import FormSection from "@/components/FormSection.vue";
 
